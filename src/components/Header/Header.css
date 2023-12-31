@@ -1,17 +1,43 @@
 /* Header.css */
 
 .header {
-    background-color: #333;
+    background-color: transparent;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 40px;
+    height: 60px; /* Height of the header */
+    /* Apply the Google Font 'Dosis' */
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600; /* Match the weight you chose (600) */
 }
 
-.header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.header .logo img {
+    height: auto;
+    width: 80px; /* Default size */
+}
+
+/* Larger devices */
+@media (min-width: 768px) {
+    .header .logo img {
+        width: 120px; /* Larger logo for larger devices */
+    }
+    .header {
+        height: 80px; /* Height for larger devices */
+        padding: 0 40px;
+    }
+}
+
+/* Smaller devices */
+@media (max-width: 480px) {
+    .header .logo img {
+        width: 60px; /* Smaller logo for smaller devices */
+    }
+    .header {
+        height: 50px; /* Height for smaller devices */
+        padding: 0 20px;
+    }
 }
 
 .header .navigation {
@@ -23,6 +49,7 @@
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s;
+    font-size: 1.2rem; /* Increased font size */
 }
 
 .header .navigation a:hover {
