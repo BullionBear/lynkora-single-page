@@ -1,0 +1,30 @@
+/* Header.css */
+
+.header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .navigation {
+    display: flex;
+}
+
+.header .navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.header .navigation a:hover {
+    background-color: #555;
+}
