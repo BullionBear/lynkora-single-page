@@ -22,8 +22,8 @@ FROM nginx:alpine
 # Copy the build output to replace the default nginx contents.
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Expose port 443 to the outside once the container has launched
-EXPOSE 443
+# Expose port 80
+EXPOSE 80
 
 # Start Nginx and keep it running
 CMD ["nginx", "-g", "daemon off;"]
