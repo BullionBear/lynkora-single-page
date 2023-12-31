@@ -3,12 +3,17 @@ import './About.css';
 
 function About() {
     return (
-        <div id="about" div className="about-section">
-            <h2>About Us</h2>
-            <p>Welcome to our website! We are a team dedicated to providing top-notch React development services. Our mission is to create high-quality, efficient, and user-friendly applications that meet the needs of our clients.</p>
-            <p>With a focus on modern web technologies and best practices, we ensure that your project is not just visually appealing but also robust and scalable. Thank you for choosing us for your development needs!</p>
+        <div id="about" className="about-section">
+            <div className="about-content">
+                <h2>About Us</h2>
+                <div className="about-text">
+                    <p>A Convergence of Expertise. Our team consists of seasoned experts in mathematics, statistics, computer science, and finance, all united with a passion for Web3 and the crypto industry. This multidisciplinary approach allows us to develop sophisticated, data-driven solutions and to navigate the complexities of modern finance with unparalleled precision and insight.
+
+                    </p>
+                </div>
+            </div>
         </div>
-    );
+);
 }
 
 export default About;

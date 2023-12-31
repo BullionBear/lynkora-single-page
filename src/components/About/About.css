@@ -1,21 +1,36 @@
 /* About.css */
 
 .about-section {
-    padding: 40px 20px;
+    padding: 60px 40px;
     text-align: center;
-    background-color: transparent; /* Set background to transparent */
+    background-color: transparent;
     color: white;
     font-family: 'Dosis', sans-serif;
-    font-weight: 600; /* Match the weight you chose (600) */
+    font-weight: 600;
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Space out the content */
+    text-align: left;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 60%;
 }
 
 .about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    flex-basis: 40%;
+    text-align: center; /* Center the text horizontally */
+    align-self: center; /* Center the text vertically within the flex item */
 }
 
 .about-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
