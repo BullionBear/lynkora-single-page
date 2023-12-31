@@ -3,6 +3,9 @@
 .services-section {
     padding: 40px 20px;
     text-align: center;
+    color: white; /* Set text color to white */
+    font-family: 'Dosis', sans-serif; /* Apply the 'Dosis' font family */
+    font-weight: 600; /* Set font weight to 600 */
 }
 
 .services-section h2 {

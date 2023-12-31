@@ -1,10 +1,12 @@
 /* HeroSection.css */
 
 .hero-section {
-    background-color: #4caf50;
+    background-color: transparent; /* Set background to transparent */
     color: white;
     padding: 50px 20px;
     text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600; /* Match the weight you chose (600) */
 }
 
 .hero-section h1 {
@@ -19,7 +21,7 @@
 
 .hero-section button {
     background-color: white;
-    color: #4caf50;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     font-size: 1rem;
@@ -28,6 +30,6 @@
 }
 
 .hero-section button:hover {
-    background-color: #3e8e41;
+    background-color: #ffae00;
     color: white;
 }

@@ -3,6 +3,9 @@
 .contact-section {
     padding: 40px 20px;
     text-align: center;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600; /* Match the weight you chose (600) */
 }
 
 .contact-form {
