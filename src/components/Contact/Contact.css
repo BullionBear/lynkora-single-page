@@ -38,3 +38,9 @@
 .contact-form button:hover {
     background-color: #3e8e41;
 }
+
+.submit-status {
+    margin-top: 20px;
+    color: #4caf50; /* Color for success message */
+    /* Style as needed, maybe different colors for success and error */
+}

@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
 import './Contact.css';
 
-
-
 function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [submitStatus, setSubmitStatus] = useState('');
 
     function handleSubmit(event) {
-        console.log("Form submitted"); // Check if this logs
-        event.preventDefault(); // Prevents default form submission behavior
-    
+        event.preventDefault(); 
+        console.log("Form submitted");
+
         const formData = {
-            name: name,
-            email: email,
-            message: message
+            name,
+            email,
+            message
         };
-    
-        // POST request to backend server
+
         fetch('http://localhost:8000/v1/submit', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json', // Assuming JSON data format
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
         })
@@ -34,14 +32,14 @@ function Contact() {
         })
         .then(data => {
             console.log('Success:', data);
-            // Handle success (e.g., show a success message)
+            setSubmitStatus('Message sent successfully!');
         })
         .catch((error) => {
             console.error('Error:', error);
-            // Handle errors here (e.g., show an error message)
+            setSubmitStatus('Failed to send message.');
         });
     }
-    
+
     return (
         <div id="contact" className="contact-section">
             <h2>Contact Us</h2>
@@ -50,6 +48,7 @@ function Contact() {
                 <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <textarea placeholder="Your Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                 <button type="submit">Send Message</button>
+                {submitStatus && <p className="submit-status">{submitStatus}</p>} {/* Display status message */}
             </form>
         </div>
     );
