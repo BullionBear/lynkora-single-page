@@ -1,10 +1,26 @@
 /* HeroSection.css */
 
 .hero-section {
-    background-color: transparent;
+    position: relative;
+    overflow: hidden; /* To ensure the pseudo-element doesn't exceed this container */
     color: white;
-    padding: 50px 20px; /* Maintain outer padding */
+    padding: 50px 20px;
     text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../assets/lynx.png'); /* Same path to your image */
+    background-size: auto 100%; /* Same settings for your background */
+    background-position: right center;
+    background-repeat: no-repeat;
+    opacity: 0.3; /* Adjust for desired translucency */
+    z-index: -1; /* Place behind the content */
 }
 
 .hero-content {
@@ -22,9 +38,14 @@
     padding-right: 20px; /* Add padding to the right of the text */
 }
 
-.hero-section h1 {
+.hero-title h1 {
     font-size: 2.5rem;
-    flex: 1; /* Allow the headline to expand */
+    background: linear-gradient(45deg, #b1a075, #a6c2d6); /* Example gradient */
+    -webkit-background-clip: text;
+    color: transparent; /* Makes the text take the color of the background */
+    display: inline-block; /* Keep the header inline-block */
+    vertical-align: top; /* Align the top of the text with the image */
+    margin-right: 10px; /* Add margin to the right of the header, if needed */
 }
 
 .hero-section p {

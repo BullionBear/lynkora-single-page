@@ -11,7 +11,9 @@ function HeroSection() {
                     </p>
                     <button>Learn More</button>
                 </div>
-                <h1>Welcome to Lynkora</h1>
+                <div className='hero-title'>
+                    <h1>Welcome to Lynkora</h1>
+                </div>
             </div>
         </div>
     );
