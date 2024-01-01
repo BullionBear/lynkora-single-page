@@ -12,7 +12,7 @@ function HeroSection() {
                     <button>Learn More</button>
                 </div>
                 <div className='hero-title'>
-                    <h1>Welcome to Lynkora</h1>
+                    <h1>Welcome to <span className="lynkora-title">Lynkora</span></h1>
                 </div>
             </div>
         </div>

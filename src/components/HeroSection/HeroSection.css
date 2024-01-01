@@ -50,6 +50,10 @@
     margin-right: 10px; /* Add margin to the right of the header, if needed */
 }
 
+.hero-title .lynkora-title {
+    font-family: 'Architects Daughter', cursive;
+}
+
 .hero-section p {
     font-size: 1.2rem;
 }
