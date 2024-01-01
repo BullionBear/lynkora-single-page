@@ -6,6 +6,8 @@
     color: white;
     padding: 50px 20px;
     text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
 }
 
 .hero-section::before {
@@ -17,7 +19,7 @@
     bottom: 0;
     background-image: url('../../assets/lynx.png'); /* Same path to your image */
     background-size: auto 100%; /* Same settings for your background */
-    background-position: right center;
+    background-position: calc(95%) center; /* Adjusted to move slightly to the left */
     background-repeat: no-repeat;
     opacity: 0.3; /* Adjust for desired translucency */
     z-index: -1; /* Place behind the content */
