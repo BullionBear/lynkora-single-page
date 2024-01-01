@@ -27,4 +27,15 @@ jobs:
         file: Dockerfile
         push: true
         tags: yitech/lynkora-web-page:latest
-        platforms: linux/amd64,linux/arm64/v8  # Specify the target platforms
+        platforms: linux/amd64,linux/arm64/v8
+
+    - name: Deploy to AWS EC2
+      uses: appleboy/ssh-action@v1.0.2
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          docker pull yitech/lynkora-web-page:latest
+          docker stop lynkora-web-page || true
+          docker run -p 80:80 --rm --name lynkora-web-page --network lynkora -d yitech/lynkora-web-page
