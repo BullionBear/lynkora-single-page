@@ -36,6 +36,7 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          docker pull yitech/lynkora-web-page:latest
           docker stop lynkora-web-page || true
+          docker rmi yitech/lynkora-web-page:latest
+          docker pull yitech/lynkora-web-page:latest
           docker run -p 80:80 --rm --name lynkora-web-page --network lynkora -d yitech/lynkora-web-page
