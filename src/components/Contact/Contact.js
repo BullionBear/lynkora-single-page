@@ -17,7 +17,7 @@ function Contact() {
             message
         };
 
-        fetch('http://localhost:8000/v1/submit', {
+        fetch('https://lynkora.com:8000/v1/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
