@@ -44,4 +44,4 @@ jobs:
           docker stop lynkora-web-page || true
           docker rmi yitech/lynkora-web-page:latest
           docker pull yitech/lynkora-web-page:latest
-          docker run -p 80:80 --rm --name lynkora-web-page --network lynkora -d yitech/lynkora-web-page
+          docker run -p 3000:80 --rm --name lynkora-web-page --network lynkora -d yitech/lynkora-web-page
