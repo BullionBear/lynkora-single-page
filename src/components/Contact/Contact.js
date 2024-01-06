@@ -27,7 +27,7 @@ function Contact() {
             setTimeout(() => reject(new Error('Request timed out')), 5000); // 5000 ms timeout
         });
 
-        Promise.race([fetchTimeout, fetch(`${process.env.REACT_APP_API_BASE_URL}/v1/submit`, {
+        Promise.race([fetchTimeout, fetch(`${process.env.REACT_APP_API_BASE_URL}/api/v1/submit`, {  // Please see nginx if you'd like to edit it
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
