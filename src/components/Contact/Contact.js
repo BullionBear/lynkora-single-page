@@ -27,14 +27,13 @@ function Contact() {
             setTimeout(() => reject(new Error('Request timed out')), 5000); // 5000 ms timeout
         });
 
-        Promise.race([fetchTimeout, fetch('https://lynkora.com/api/v1/submit', {  // Please see nginx if you'd like to edit it
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'API-Key': `${process.env.REACT_APP_API_KEY}`
-            },
-            body: JSON.stringify(formData),
-        })])
+        Promise.race([fetchTimeout,fetch('http://localhost:8080/v1/user/new_user', { // Corrected URL
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })])
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
